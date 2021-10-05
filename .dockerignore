@@ -1,0 +1,8 @@
+venv/
+.venv/
+.idea/
+build/
+streamingcli.egg-info/
+requirements.txt
+docker-compose.yml
+Dockerfile
