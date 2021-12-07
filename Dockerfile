@@ -1,4 +1,4 @@
-FROM registry.gitlab.com/getindata/streaming-labs/docker-images/vvp-flink-python:latest
+FROM registry.gitlab.com/getindata/streaming-labs/docker-images/vvp-flink-python:1.14.0-java8-python3.8-0.1.2
 
 USER flink
 
