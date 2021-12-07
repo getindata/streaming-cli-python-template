@@ -4,7 +4,7 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-apache-flink = "==1.13.2"
+apache-flink = "==1.14.0"
 
 [dev-packages]
 
