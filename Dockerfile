@@ -1,12 +1,16 @@
-FROM registry.gitlab.com/getindata/streaming-labs/docker-images/vvp-flink-python:1.14.0-java8-python3.8-0.1.2
+FROM registry.ververica.com/v2.9/flink:1.15.3-stream1-scala_2.12-java8
+
+USER root
+
+RUN pip install pipenv
 
 USER flink
 
-COPY ./Pipfile /flink/opt
+COPY ./Pipfile ./Pipfile.lock /flink/opt/
 
 RUN set -ex && \
     cd /flink/opt && \
-    pipenv lock -r > requirements.txt && \
+    pipenv requirements > requirements.txt && \
     pip install -r requirements.txt
 
 COPY ./src /app/src
