@@ -3,8 +3,8 @@
 1. Install VVP (e.g. on minikube): https://docs.ververica.com/getting_started/installation.html
 2. mvn clean package
 3. (optional) Publish docker image e.g.
-- `docker build docker <YOUR_DOCKER_REGISTRY>/ververica/pyflink:1.11.2-scala_2.12`
-- `docker push <YOUR_DOCKER_REGISTRY>/ververica/pyflink:1.11.2-scala_2.12`
+- `docker build docker <YOUR_DOCKER_REGISTRY>/ververica/pyflink:1.15.3-scala_2.12`
+- `docker push <YOUR_DOCKER_REGISTRY>/ververica/pyflink:1.15.3-scala_2.12`
 4. Add secrets for pulling docker images
 - `kubectl create secret docker-registry regcred --docker-server=<YOUR_DOCKER_REGISTRY> --docker-username=[gitlab-username] --docker-password=[token] --docker-email=[email] -n vvp-jobs`
 4. Create a deployment
